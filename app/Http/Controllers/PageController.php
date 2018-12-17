@@ -1,0 +1,56 @@
+<?php
+
+namespace App\Http\Controllers;
+use App\Category;
+use App\Product;
+
+class PageController extends Controller {
+	public function getIndex() {
+		return view('page.trangchu', compact('hinh'));
+	}
+	public function getSearch() {
+		$product = Product::all();
+		$category = Category::all();
+		return view('page.search', compact('product', 'category'));
+	}
+	public function getChuot() {
+		$product = Product::where('category', 1)->get();
+		$category = Category::all();
+		return view('page.search', compact('product', 'category'));
+	}
+	public function getGhe() {
+		$product = Product::where('category', 2)->get();
+		$category = Category::all();
+		return view('page.search', compact('product', 'category'));
+	}
+	public function getBanphim() {
+		$product = Product::where('category', 3)->get();
+		$category = Category::all();
+		return view('page.search', compact('product', 'category'));
+	}
+	public function getLoa() {
+		$product = Product::where('category', 4)->get();
+		$category = Category::all();
+		return view('page.search', compact('product', 'category'));
+	}
+	public function getLuutru() {
+		$product = Product::where('category', 5)->get();
+		$category = Category::all();
+		return view('page.search', compact('product', 'category'));
+	}
+	public function getPhone() {
+		$product = Product::where('category', 6)->get();
+		$category = Category::all();
+		return view('page.search', compact('product', 'category'));
+	}
+	public function getSac() {
+		$product = Product::where('category', 7)->get();
+		$category = Category::all();
+		return view('page.search', compact('product', 'category'));
+	}
+	public function getTainghe() {
+		$product = Product::where('category', 8)->get();
+		$category = Category::all();
+		return view('page.search', compact('product', 'category'));
+	}
+}
